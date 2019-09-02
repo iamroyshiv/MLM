@@ -1,0 +1,365 @@
+<html>
+    <head>
+	      <style>
+		         body
+				 {
+
+           background: white;
+                    background-size: cover;
+                     background-repeat: no-repeat;
+                    background-attachment: fixed;
+	                color:white;
+					font-weight:400;
+				 }
+				  #footer
+				   {
+					   position:relative;
+					   top:90%;
+				   }
+				   #total_income,#daily_earning,#level_income
+				   {
+					 <!--  background-image:linear-gradient(to right,#7F00FF ,#E100FF);-->
+					 background-image: linear-gradient(to right top, #1a1d1e, #00324a, #004480,#0050b5,#5a4ddc);
+				   }
+
+				  #b1:hover,#b2:hover,#b3:hover,#b4:hover,#b5:hover,#b6:hover,#b7:hover,#level_income:hover,#total_income:hover,#daily_earning:hover
+				  {
+					  text-align:center;
+					  width:210px;
+					  height:160px;
+				  }
+
+
+				#div_container
+                  {
+					  width:95%;
+                	display:grid;
+	              grid-template-columns:auto auto auto;
+	               margin-left:15%;
+                 margin-top:15%;
+                  }
+
+                  #b1,#b2,#b3,#b4,#b5,#b6,#b7,#level_income,#total_income,#daily_earning
+                  {
+	                display:;
+	                background-image:linear-gradient(to right,#7F00FF ,#E100FF);
+	                width:200px;
+	                height:150px;
+                	font-size:25px;
+	               padding:%;
+	                margin:1%;
+                	border-radius: 10px;
+	                position:relative;
+	                text-align:center;
+                 }
+
+
+				  @media only screen and (max-width:650px) {
+
+					  #div_container
+                        {
+	                     display:;
+						 margin:left:5%;
+						}
+						 #b1,#b2,#b3,#b4,#b5,#b6,#b7,#level_income,#total_income,#daily_earning
+                         {
+							 display:;
+							 grid-column-start:1;
+							 grid-column-end:3;
+						 }
+				  }
+
+		  </style>
+		  <meta name="viewport" content="width=device-width,initial-scale=1" media="all">
+		  <link href="earning.css" rel="stylesheet" type="text/css" media="all">
+		  <link href="afterlogin.css" rel="stylesheet" type="text/css" media="all">
+
+
+	</head>
+
+	<body>
+	         <?php
+			     //include 'connect_db.php';
+
+				  $username="root";
+		             $host="localhost";
+                     $password="rohitkumar";
+                     $database="wallet";
+
+				       $con=mysqli_connect($host,$username,$password,$database)
+				        or die("unable to connect database");
+
+
+						mysqli_select_db($con,$database)
+	                      or die("U to connect database");
+			 ?>
+
+	           <?php
+			                    session_start();
+
+								/*if(!isset($_SESSION['cepin']))
+								{
+									header("Location:login.php");
+									exit();
+								}*/
+
+								$epin=$_SESSION['epin'];
+
+			   ?>
+
+
+			    <!-- top bar-->
+	       <div id="top_bar" >
+		          <div id="top_bar_item1">
+				     <?php $url="after_login.php?epin='".$epin."'";
+					                echo "<a href='$url'>";?><img id="dicon" href='$url' src="enterprise.png"><?php echo "</a>";?>
+
+				  </div>
+				  <div id="top_bar_item2">
+				          <?php $url="dailyearningshow.php?epin='".$epin."'";
+					                 echo "<a href='$url'>";?><img id="dailyicon" href='$url' src="calendar.png"><?php echo "</a>";?>
+				  </div>
+				  <div id="top_bar_item3">
+				       <?php $url="paymentretrivation.php?epin='".$epin."'";
+					                echo "<a href='$url'>";?><img id="payment" href='$url' src="rupee-indian.png"><?php echo "</a>";?>
+				  </div>
+				  <div id="top_bar_item4">
+				       <?php $url="withdraw.php?epin='".$epin."'";
+					                echo "<a href='$url'>";?><img id="withdraw" href='$url' src="withdraw.png"><?php echo "</a>";?>
+				  </div>
+				  <div id="top_bar_item5">
+				        <?php $url="support.php?epin='".$epin."'";
+					                echo "<a href='$url'>";?><img id="support" href='$url' src="delivery.png"><?php echo "</a>";?>
+				  </div>
+		   </div>
+
+
+
+	       <!-- side bar-->
+	       <div id="side_bar" >
+		          <div id="side_bar_item1">
+				     <?php $url="after_login.php?epin='".$epin."'";
+					                echo "<a href='$url'>";?><img id="dicon" href='$url' src="enterprise.png"><?php echo "DASHBOARD</a>";?> DASHBOARD
+
+				  </div><hr>
+				  <div id="side_bar_item2">
+				          <?php $url="dailyearningshow.php?epin='".$epin."'";
+					                 echo "<a href='$url'>";?><img id="dailyicon" href='$url' src="calendar.png"><?php echo "DAILY</a>";?>
+				  </div><hr>
+				  <div id="side_bar_item3">
+				       <?php $url="paymentretrivation.php?epin='".$epin."'";
+					                echo "<a href='$url'>";?><img id="payment" href='$url' src="rupee-indian.png"><?php echo "PAYMENT</a>";?>
+				  </div><hr>
+				  <div id="side_bar_item4">
+				       <?php $url="withdraw.php?epin='".$epin."'";
+					                echo "<a href='$url'>";?><img id="withdraw" href='$url' src="withdraw.png"><?php echo "WITHDRAW</a>";?>
+				  </div><hr>
+				  <div id="side_bar_item5">
+				        <?php $url="support.php?epin='".$epin."'";
+					                echo "<a href='$url'>";?><img id="support" href='$url' src="delivery.png"><?php echo "SUPPORT</a>";?>
+				  </div><hr>
+		   </div>
+          <div style="text-align:center;color:black;position:relative;">
+            DASHBOARD
+          </div>
+        	<div id="user_info"  style="">
+			            <?php
+						    //user info
+							$uquery="SELECT * FROM adminregistration where epin='".$epin."'";
+							$uresult=mysqli_query($con,$uquery);
+							$urow=mysqli_fetch_array($uresult);
+						?>
+
+
+			          USERNAME:- <?php $url="userprofile.php?epin='".$epin."'";
+					                  echo "<a href='$url' target='_blank'>"; echo $urow['username']; echo "</a>";?>
+	                 <!-- D.O.J:---><?php //echo "";?>
+					  <!--REFFERED BY:---><?php //echo $urow['referalid'];?>
+
+					  <form id="user_form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+					  <input type="submit" name="logout" value="" id="logout">
+					  </form>
+					  </div>
+					  <?php
+					     if(isset($_POST['logout']))
+						 {
+					       $tmp=$_SESSION['epin'];
+                          session_destroy();
+                          session_regenerate_id();
+                          $_SESSION['epin']=$tmp;
+                          header('Location:login.html');
+						 }
+					  ?>
+
+
+	       </div>
+
+		    <!--<div id="level_description" style="">
+			           <div id="levelHierarchy">
+					          <u><b>LEVEL HIERARCHY</b></u>
+					   </div>-->
+
+		                 <?php
+						     //daily_earning($con,$epin);
+						 ?>
+			 <div id="div_container">
+                <?php
+                   $query="select * from level where epin='".$epin."'";
+				   $result=mysqli_query($con,$query);
+				   $row=mysqli_fetch_array($result);
+
+				 ?>
+				   <div class="l1" id="b1">
+				            <u>LEVEL 1</u></br>
+							MEMBER NO-<?php echo $row['level1'];?>
+							</br>Rs<?php echo $row['level1']*3;?>
+
+				   </div>
+				   <div class="l1" id="b2">
+				           <u>LEVEL 2</u>
+						   </br>MEMBER NO-<?php echo $row['level2'];?>
+						   </br>Rs<?php echo $row['level2']*1;?>
+				   </div>
+				   <div class="l1" id="b3">
+				          <u>LEVEL 3</u>
+						  </br>MEMBER NO-<?php echo $row['level3'];?>
+						  </br>Rs<?php echo $row['level3']*1;?>
+				   </div>
+				   <div class="l1" id="b4">
+				          <u>LEVEL 4</u>
+						  </br>MEMBER NO-<?php echo $row['level4'];?>
+						  </br>Rs<?php echo $row['level4']*0.5;?>
+				   </div>
+				   <div class="l1" id="b5">
+				          <u>LEVEL 5</u>
+						  </br>MEMBER NO-<?php echo $row['level5'];?>
+						  </br>Rs<?php echo $row['level5']*0.2;?>
+				   </div>
+				   <div class="l1" id="b6">
+				          <u>LEVEL 6</u>
+						  </br>MEMBER NO-<?php echo $row['level6'];?>
+						  </br>Rs<?php echo $row['level6']*0.2;?>
+				   </div>
+				   <div class="l1" id="b7">
+				          <u>LEVEL 7</u>
+						  </br>MEMBER NO-<?php echo $row['level2'];?>
+						  </br>Rs<?php echo $row['level7']*0.1;?>
+				   </div>
+
+                    <div id="daily_earning">
+					     DAILY INCOME</br>Rs
+                          <?php echo $row['level0']*5+$row['level1']*3+$row['level2']*1+$row['level3']*1+$row['level4']*0.5+$row['level5']*0.2+$row['level6']*0.2+$row['level7']*0.1;?>
+                   </div>
+                    <div id="total_income">
+                         TOTAL INCOME</br>Rs
+						 <?php echo $row['total']; ?>
+                   </div>
+			   </div>
+
+
+
+	       <!--<div id="total_income" background-image="linear-gradient(to right,#7F00FF ,#E100FF)">
+		                  TOTAL:-
+		                           <?php
+								    // total($con,$epin);
+								   ?>
+		   </div>-->
+	       <!--<div id="daily_earning" style="">
+		                   DAILY INCOME:-
+		                           <?php
+
+		                             //daily_total($con,$epin);
+
+								   ?>
+		   </div>-->
+		   <!--<div id="level_income" style="">
+		            <?php //echo ""?>
+		   </div>-->
+
+
+		   <?php
+		       function total($con,$cepin)
+			   {
+				   $query="select total from level where epin='".$cepin."'";
+				   $result=mysqli_query($con,$query);
+				   $row=mysqli_fetch_array($result);
+				      echo $row['total'];
+			   }
+		   ?>
+
+
+		   <?php
+            function daily_total($con,$cepin)
+			{
+				$query="select * from level where epin='".$cepin."'";
+				   $result=mysqli_query($con,$query);
+				   $row=mysqli_fetch_array($result);
+				   echo $row['level0']*5+$row['level1']*3+$row['level2']*1+$row['level3']*1+$row['level4']*0.5+$row['level5']*0.2+$row['level6']*0.2+$row['level7']*0.1;
+			}
+            ?>
+
+		   <?php
+		       function daily_earning($con,$cepin)
+			   {
+				   $query="select * from level where epin='".$cepin."'";
+				   $result=mysqli_query($con,$query);
+				   $row=mysqli_fetch_array($result);
+				   ?>
+
+
+
+				    <!--<table id="tbl"  border="1px solid black"; width="100%";height="100%"; >--><?php
+				      /*  echo '<tr>';
+						    echo '<td>'."LEVEL ".'</td>'; echo '<td>No of persons</td>'; echo '<td>Amount</td>';
+						echo '</tr>';
+						echo '<tr>';
+						    echo '<td>'."LEVEL 0".'</td>'; echo '<td>'.$row['level0'].'</td>'; echo '<td>'.$row['level0']*5 .'</td>';
+						echo '</tr>';
+						echo '<tr>';
+						    echo '<td>'."LEVEL 1".'</td>'; echo '<td>'.$row['level1'].'</td>'; echo '<td>'.$row['level1']*3 .'</td>';
+						echo '</tr>';
+						 echo '<tr>';
+						    echo '<td>'."LEVEL 2".'</td>'; echo '<td>'.$row['level2'].'</td>'; echo '<td>'.$row['level2']*1 .'</td>';
+						echo '</tr>';
+						 echo '<tr>';
+						    echo '<td>'."LEVEL 3".'</td>'; echo '<td>'.$row['level3'].'</td>'; echo '<td>'.$row['level3']*1 .'</td>';
+						echo '</tr>';
+						 echo '<tr>';
+						    echo '<td>'."LEVEL 4".'</td>'; echo '<td>'.$row['level4'].'</td>'; echo '<td>'.$row['level4']*0.5 .'</td>';
+						echo '</tr>';
+						 echo '<tr>';
+						    echo '<td>'."LEVEL 5".'</td>'; echo '<td>'.$row['level5'].'</td>'; echo '<td>'.$row['level5']*0.2 .'</td>';
+						echo '</tr>';
+						 echo '<tr>';
+						    echo '<td>'."LEVEL 6".'</td>'; echo '<td>'.$row['level6'].'</td>'; echo '<td>'.$row['level6']*0.2 .'</td>';
+						echo '</tr>';
+						 echo '<tr>';
+						    echo '<td>'."LEVEL 7".'</td>'; echo '<td>'.$row['level7'].'</td>'; echo '<td>'.$row['level7']*0.1 .'</td>';
+						echo '</tr>';
+						$rtotal=$row['level0']+$row['level1']+$row['level2']+$row['level3']+$row['level4']+$row['level5']+$row['level6']+$row['level7'];
+						$rtotalamount=$row['level0']*5+$row['level1']*3+$row['level2']*1+$row['level3']*1+$row['level4']*0.5+$row['level5']*0.2+$row['level6']*0.2+$row['level7']*0.1;
+						echo '<tr>';
+						    echo '<td>'."TOTAL".'</td>'; echo '<td>'.$rtotal.'</td>'; echo '<td>'.$rtotalamount.'</td>';
+						echo '</tr>';
+				   echo '</table>';
+
+
+				*/
+                 ?>
+
+
+
+				<?php
+			   }
+
+		   ?>
+		   <div id="footer" background="BLUE" width="100%" height="10px">
+
+				          <p align="center"><b>your <u><strong>EPIN</strong></u> number is:- <?php echo $epin;?></b></p>
+
+		   </div>
+
+
+	</body>
+
+</html>

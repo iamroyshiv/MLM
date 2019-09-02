@@ -1,0 +1,81 @@
+body{
+   background-image: linear-gradient(to right top, #274ed5, #5f42c6, #7c35b6, #8f26a4, #9d1392);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+}
+.signup{
+    width: 450px;
+    height: 820px;
+    background: #000;
+    background-attachment: scroll;
+    color: #fff;
+    top: 45%;
+    left:50%;
+    background: rgba(0,0,0,.7); 
+    scroll-behavior: smooth;  scroll-behavior: smooth;
+    border-radius: 15px;
+    position: absolute;
+    transform: translate(-50%,-40%);
+    box-sizing: border-box;
+    padding: 20px 70px 70px 70px;
+
+}
+#arrow{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-top: 0px;
+}
+h1{
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+}
+#namefield{
+    width: 320px;
+    height: 25px;
+    border-radius: 5px;
+}
+#email,#pass1,#pass2{
+    width:320px;
+    height: 25px;
+    border-radius: 5px;
+
+
+}
+
+#btn{
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    margin-left: 200px;
+    border-radius: 6px;
+    background: #C9159B;
+    border-color: #C9159B;
+
+    
+
+}
+#btn:hover{
+    background-color: blue;
+    border: blue;
+    font-size: 20px;
+    transition: 2s;
+    width: 120px;
+    height:45px;
+    font-family: cursive;
+}
+.signup input[type="text"],input[type="email"],input[type="password"],input[type="confirm_password"]{
+    border: none;
+    border-bottom: 2px solid rgb(215, 5, 243);
+    background: transparent;
+    color:#F91D03;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    outline: none;
+    height: 40px;
+    font-size: 15px;
+
+}

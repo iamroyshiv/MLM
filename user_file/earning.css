@@ -1,0 +1,43 @@
+body
+{
+	
+}
+#tblearning
+{
+	position:absolute;
+	top:30%;
+	left:30%;
+	width:50%;
+	background:rgba(0,0,0,0.5);
+	color:white;
+	font-weight:400;
+	text-align:center;
+	border:10px solid rgba(0,0,0,0.7);
+}
+#tblearningtable
+{
+	text-align:center;
+}
+/*<!--withdraw table-->*/
+
+
+
+/*<!----->*/
+
+#query_sentence
+{
+	font-size:100%;
+	text-align:center;
+	position:absolute;
+	top:30%;
+	left:30%;
+	border:1px solid red;
+}
+#query_form
+{
+	position:absolute;
+	top:30%;
+	left:40%;
+	width:45%;
+	border:1px solid red;
+}
