@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MIMARKETING</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="login.css" rel="stylesheet" type="text/css" media="all">
+    <link href="icon2.png" rel="shortcut icon" type="image/png">
+    <link rel="stylesheet" type="text/css" href="toogle.css" media="all">
+ </head>   
+<body>
+     <nav role="navigation">
+  <div id="menuToggle">
+    
+    <input type="checkbox" />
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <ul id="menu">
+      <a href="index.html"><li>Home</li></a>
+      <a href="register.html"><li>Register</li></a>
+      <a href="adminlogin.html"><li>Admin Login</li></a>
+      <a href="login.html"><li>User Login</li></a>
+      <a href="aboutus.html"><li>About Us</li></a>
+      <a href="contactus.html"><li>Contact Us</li></a>
+    </ul>
+  </div>
+</nav>
+    <header>
+            <div class="menu-toggle">
+                
+            </div>
+            <div id="nav">
+                
+                <ul>
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><div class="dropdown">
+  <a class="dropbtn">LOGIN</a>
+  <div class="dropdown-content">
+    <a href="login.html">User Login</a>
+    <a href="admin_login.html">Admin Login</a>
+     <a href="register.html">Register Here</a>
+  </div>
+</div></li>
+
+                    <li><a href="aboutus.html">ABOUT US</a></li> 
+                    <li><a href="contactus.html">CONTACT US</a></li>
+
+                </ul>
+            </div>
+     </header>
+    <div class="login">
+        <img src="icons8-user-100.png" class="avatar">
+        <h1>Login Here<img id="arrow"   src="icons8-chevron-down-64.png"></h1>
+        <form method="POST" action="user_file/login.php">
+            <p>E-PIN</p>
+            <input id="idfield"  name="epin" type="text" placeholder="Enter your E-Pin as UserId">
+            <p>Password</p>
+            <input id="passfield" name="password"   type="password" placeholder="Enter your Password">
+            <input id="btn" type="submit" name="submit" value="LOGIN">
+            <!--<a id="forget"   href="#">Forgot Password?</a><br>-->
+            <a id="dont"   href="register.html">Don't have an account yet?</a>
+
+        </form>
+        </div>   
+        <!-- bubble effect -->
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <!-- //bubble effect -->
+
+
+
+
+
+              
+
+
+
+</body>
+</html>
+
+
+

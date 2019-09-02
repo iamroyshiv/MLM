@@ -1,0 +1,909 @@
+{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding:0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   /* background-image: linear-gradient(to left bottom, #f2119a, #ff3c6f, #ff7643, #ffad12, #f2df12);*/
+    background-attachment:fixed;
+    background-size: cover;
+    height: 800px;
+    overflow-x: hidden;
+}
+
+#head{
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    padding-bottom: 1px;
+    padding: 0px;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    height: 20%;
+    border-radius: 4px;
+}
+#logo{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  z-index: 2;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+#logo h1{
+  float: left;
+  color: black;
+  position: relative;
+}
+#logo h1 a{
+    font-size: 70px;
+    color: #fff;
+    text-shadow: 2px 5px 3px rgba(239, 238, 238, 0.06);
+    font-weight: 300;
+    word-spacing: -9px;
+    margin-top: -30%;
+    position: relative;
+    float: left;
+    text-decoration: none;
+  }
+  .heading{
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 650px;
+    margin-top: 0%;
+    background:url(cover2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
+  }
+  .container1 h3{
+    font-size: 40px;
+    padding-left: 40%;
+    color:#fff;
+
+  }
+  .container1{
+    height: 280px;
+    border-radius: 5px;
+  
+  }
+  
+  .content h4{
+    padding-left: 10px;
+  }
+  #Discover {
+   margin-left: 43%;
+    text-decoration: none;
+    font-size: 20px;
+    width: 60%;
+    height: 20px;
+    background-color: blue;
+  }
+  .dbtn{
+    margin-top: 60px;
+  }
+  
+  .dbtn a{
+
+  padding: 10px;
+  color: white;
+  }
+#Discover:hover{
+  background-color: yellow;
+
+}
+.dbtn a:hover{
+  color: black;
+  transition: 1s;
+}
+#line{
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 0%;
+}
+.s1{
+ 
+  float: left;
+  width: 25%;
+  height: 200px;
+  padding: 2%;
+  padding-left: 3%;
+
+}
+.s2{
+    float: right;
+  width: 25%;
+  height: 200px;
+  padding: 2%;
+  padding-left: 2%;
+}
+.s3{
+  width: 25%;
+  height: 200px;
+  padding: 2%;
+  margin-left: 40%;
+}
+.section1{
+  
+  /*background-image: linear-gradient(to right bottom, #1fb0b7, #00c1ad, #00d090, #56db63, #9ce11b);*/
+}
+#services{
+  margin-left: 45%;
+  font-size: 30px;
+
+}
+.p1{
+  font-size: 23px;
+  color: black;
+}
+.p2{
+font-size: 23px;
+  color: black;
+
+}
+.p3{
+  font-size: 23px;
+    color: black;
+
+}
+section{
+  background:url(cover6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  padding-top: 5%;
+  margin-top: -1%;
+}
+#Mission{
+padding-top: 10%;
+color: white;
+}
+#vision{
+  padding-top: 10%;
+  color: white;
+
+}
+#Benifits{
+  padding-top: 10%;
+  color: white;
+
+}
+ .foot input[type="text"]{
+  border:2px solid black;
+  width: 30%;
+  height: 10%;
+  background: transparent;
+    color: #C9159B;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    outline: none;
+    height: 40px;
+    font-size: 15px;
+
+ }
+ .foot button[type="submit"]{
+  width: 10%;
+  height: 25%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: #C9159B;
+  border-color: #C9159B;
+ }
+ .right{
+  font-size: 18px;
+  color: black;
+  margin-left: 15%;
+  padding-top: 5%;
+}
+.copy{
+  margin-left: 25%;
+  margin-top: 10%;
+}
+footer{
+  height: 30%;
+  background:url(cover3.jpg);
+  background-size: cover;
+  padding-top: 10%;
+  padding-bottom: 30%;
+}
+#Subscribe{
+  margin-left: 5%;
+}
+.foot{
+  margin-left: 5%;
+}
+
+
+#menuToggle
+{
+  display:none;
+
+}
+#head{
+  display: block;
+}
+
+
+#nav{
+    float: right;
+    position: fixed;
+    margin-left: 50%;
+    
+    
+    margin-top: 6%;
+}
+.clearfix{
+    clear: both;
+    
+}
+header{
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    background:rgba(253, 249, 249, 0);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+
+
+#nav ul{
+    margin:0;
+    padding: 0;
+    display: flex;
+    text-decoration: none;
+}
+#nav ul li{
+    list-style:none;
+
+}
+#nav ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 8px 20px;
+    
+    color: white;
+      border-radius: 5px;
+    margin:10px 0;
+
+}
+
+.active{
+    background:rgba(215, 4, 235, 0.863); 
+}
+ul li a:hover{
+    color: yellow;
+    background-color: black;
+    transition: 0.5s;
+
+
+}
+/** {
+    box-sizing: border-box;
+  }*/
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 32px;
+  }
+  h1{
+      font-size: 100px;
+      font-family:Kleymissky Regular;
+  }
+  #lovebtn{
+      width: 180px;
+      height:75px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 15px;
+      background-color:rgba(9, 88, 179,1);
+      box-shadow: 100px;
+
+
+  }
+ p{
+      font-size: 30px;
+      color: red;
+      padding-top: 20px;
+  }
+  
+  .row {
+      border:1px  white solid;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;     
+    margin-left:2%;
+    margin-right:2%;                
+  }
+  .column {
+    flex: 25%;
+    max-width: 33%;
+    padding-left:1%;
+    margin-left:0px;
+  }
+  
+  .column img {
+    margin-top: 5px;
+    vertical-align:bottom ;
+  }
+  
+  /*@media screen and (max-width: 1222px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 25%;
+      max-width: 25%;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+@media(max-width:1200px){
+    header{
+        margin: 0px;
+    }
+}
+@media(max-width:768px){
+    
+    }
+    nav{
+        display: block;
+    }
+}*/
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  padding: 8px 20px;
+    border-radius: 5px;
+    margin:10px 10px;
+    margin-left: 15px;
+    width: 90px;
+  border: none;
+
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown a{
+  color: white;
+  font-weight: 900
+  ;
+}
+
+.dropdown-content a:hover {background-color: red;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+
+}
+
+.dropdown:hover .dropbtn {background-color:red;
+   color: yellow;
+    background-color: black;
+    transition: 0.5s;
+
+}
+/*responsive design*/
+@media screen and (max-width:600px){
+  #head{
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #logo h1{
+  float: left;
+  position: fixed;
+  top: -15%;
+  left: 10%;
+}
+#logo{
+  background:url(cover6.jpg);
+  background-size: contain;background-repeat: no-repeat;
+}
+#logo h1 a{
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 2px 5px 3px rgba(239, 238, 238, 0.06);
+    font-weight: 300;
+    word-spacing: -9px;
+    margin-top: 10%;
+    position: relative;
+    float: left;
+    text-decoration: none;
+  }
+  nav ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 8px 15px;
+    color: black;
+    border-radius: 5px;
+    margin-left: 0%;
+  }
+  nav{
+    float:left;
+    position: fixed;
+    margin-left: 1%;
+  }
+   .heading{
+    padding-top: 40%;
+    padding-left: 15%;
+    padding-right: 10%;
+  }
+  .container1 h3{
+    font-size: 40px;
+    padding-left: 30%;
+    color:#fff;
+
+  }
+  .container1{
+    height: 280px;
+    border-radius: 5px;
+    
+  }
+  .content h4{
+    padding-left: 10px;
+  }
+  #Discover {
+   margin-left: 28%;
+    text-decoration: none;
+    font-size: 20px;
+    width: 60%;
+    height: 20px;
+    background-color: blue;
+  }
+  .dbtn{
+    margin-top: 40px;
+  }
+  .s1{
+ 
+  float: left;
+  width: 90%;
+  height: 200px;
+  margin-left: 5%;
+
+}
+.s2{
+    float: right;
+  width: 90%;
+  height: 200px;
+  padding: 2%;
+  margin-top: 50%;
+}
+.s3{
+  width: 90%;
+  height: 200px;
+  margin-left: 10%;
+  margin-top: 120%;
+}
+
+#services{
+  margin-left: 45%;
+  font-size: 30px;
+
+}
+.p1{
+  font-size: 23px;
+  color: black;
+}
+.p2{
+font-size: 23px;
+  color: black;
+
+}
+.p3{
+  font-size: 23px;
+  margin-top: 10%;
+    color: black;
+
+}
+#Mission{
+padding-top: 10%;
+color: white;
+}
+#vision{
+  padding-top: 10%;
+  color: white;
+
+}
+#Benifits{
+  padding-top: 10%;
+  margin-top: 60%;
+  color: white;
+
+}
+.section1{
+  height: 200%;
+  /*background-image: linear-gradient(to right bottom, #1fb0b7, #00c1ad, #00d090, #56db63, #9ce11b);*/
+  padding-top: 15%;
+  background:url(cover4.jpg);
+  background-size: cover;
+
+
+}
+.right{
+  font-size: 14px;
+  color: blue;
+}
+.foot button[type="submit"]{
+  width: 15%;
+  height: 25%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #C9159B;
+  border-color: #C9159B;
+ }
+ .copy{
+  margin-left: 15%;
+  margin-top: 20%;
+}
+.foot{
+  margin-left: 10%;
+  padding-bottom: -80%;
+}
+footer{
+  height: 40%;
+  padding-bottom: -60%;
+}
+#Subscribe{
+
+}
+
+}
+
+
+
+@media screen and (max-width:400px){
+  #logo h1{
+  float: left;
+  position: fixed;
+  top: -15%;
+  left: 10%;
+}
+#head{
+  background-size: cover;
+    background-repeat: no-repeat;
+}
+#logo h1 a{
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 2px 5px 3px rgba(239, 238, 238, 0.06);
+    font-weight: 300;
+    word-spacing: -9px;
+    margin-top: 10%;
+    position: fixed;
+    float: left;
+    text-decoration: none;
+  }
+  nav ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 8px 15px;
+    color: white;
+    border-radius: 5px;
+    margin-left: 0%;
+  }
+  nav{
+    float:left;
+    position: fixed;
+    margin-left: %;
+  }
+   .heading{
+    padding-top: 40%;
+    padding-left: 15%;
+    padding-right: 10%;
+  }
+  .container1 h3{
+    font-size: 40px;
+    padding-left: 30%;
+    color:#fff;
+
+  }
+  .container1{
+    height: 280px;
+    border-radius: 5px;
+    
+  }
+  .container1 h3{
+
+    padding-left: 5%;
+  }
+  .content h4{
+    padding-left: 10px;
+    margin-bottom: -5%;
+  }
+  #Discover {
+   margin-left: 18%;
+    text-decoration: none;
+    font-size: 20px;
+    width: 60%;
+    height: 20px;
+    background-color: blue;
+  }
+  .dbtn{
+    margin-top: 40px;
+    margin-left: -12%;
+  }
+  .s1{
+ 
+  float: left;
+  width: 90%;
+  height: 200px;
+  margin-left: 5%;
+
+}
+.s2{
+    float: right;
+  width: 90%;
+  height: 200px;
+  padding: 2%;
+  margin-top: 60%;
+}
+.s3{
+  width: 90%;
+  height: 200px;
+  margin-left: 10%;
+  padding-top: 60%;
+  
+}
+
+#services{
+  margin-left: 45%;
+  font-size: 30px;
+
+}
+.p1{
+  font-size: 23px;
+  color: black;
+}
+.p2{
+font-size: 23px;
+  color: black;
+
+}
+.p3{
+  font-size: 23px;
+  margin-top: 10%;
+    color: black;
+
+}
+#Mission{
+padding-top: 10%;
+color: white;
+}
+#vision{
+  padding-top: 10%;
+  color: white;
+
+}
+#Benifits{
+  padding-top: 10%;
+  margin-top: 60%;
+  color: white;
+
+}
+.section1{
+  height: 200%;
+  /*background-image: linear-gradient(to right bottom, #1fb0b7, #00c1ad, #00d090, #56db63, #9ce11b);*/
+  padding-top: -10%;
+
+
+}
+section h2{
+  position: relative;
+  left:-25%;
+}
+.right{
+  font-size: 14px;
+  color: blue;
+  margin-left: 12%;
+}
+.foot button[type="submit"]{
+  width: 15%;
+  height: 25%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #C9159B;
+  border-color: #C9159B;
+ }
+ .copy{
+  margin-left: 15%;
+  margin-top: 15%;
+}
+.foot{
+  margin-left: 10%;
+}
+footer{
+  height: 40%;
+}
+#Subscribe{
+
+}
+
+}
+
+@media screen and (max-width:600px)
+{
+    
+    a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+.s3{
+  margin-top: 160%;
+}
+
+a:hover
+{
+  color: tomato;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+     
+     #head{
+      display:none;
+     }
+     section h2{
+  padding-left:-5%;
+}
+}
