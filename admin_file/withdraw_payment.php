@@ -1,0 +1,157 @@
+<html>
+    <head>
+	      <style>
+		         body
+				 {
+					 background:;
+				 }
+		  </style>
+		  
+		  <link href="admin.css" rel="stylesheet" type="text/css">
+		  <link href="afterlogin.css" rel="stylesheet" type="text/css">
+		  <meta name="viewport" content="width=device-width,initial-scale=1">
+	</head>
+	
+	<body>
+	         <?php
+			     //include 'connect_db.php';
+				 
+				  $username="root";
+		             $host="localhost";
+                     $password="rohitkumar";
+                     $database="wallet";
+					 
+				       $con=mysqli_connect($host,$username,$password,$database)
+				        or die("unable to connect database");
+						
+						
+						mysqli_select_db($con,$database)
+	                      or die("U to connect database");
+			 ?>
+	
+	           <?php
+			                    session_start();
+								
+								/*if(!isset($_SESSION['cepin']))
+								{
+									header("Location:login.php");
+									exit();
+								}*/
+								
+								$username=$_SESSION['username'];
+								
+			   ?>
+	    
+		
+		 <div id="top_bar">
+		          <div id="top_bar_item1">
+				     <?php $url="after_login_admin.php?username='".$username."'"; 
+					                echo "<a href='$url'>";?><img id="dicon" href='$url' src="enterprise.png"><?php echo "</a>";?> 
+					 
+				  </div>
+				  <div id="top_bar_item2">
+				          <?php $url="payment_request.php?username='".$username."'"; 
+					                 echo "<a href='$url'>";?><img id="dailyicon" href='$url' src="calendar.png"><?php echo "</a>";?>
+				  </div>
+				  <div id="top_bar_item3">
+				       <?php $url="withdraw_payment.php?username='".$username."'"; 
+					                echo "<a href='$url'>";?><img id="payment" href='$url' src="rupee-indian.png"><?php echo "</a>";?>
+				  </div>
+				  <div id="top_bar_item4">
+				       <?php $url="list_of_users.php?username='".$username."'"; 
+					                echo "<a href='$url'>";?><img id="withdraw" href='$url' src="withdraw.png"><?php echo "</a>";?>
+				  </div>
+				  <div id="top_bar_item5">
+				        <?php $url="change_password.php?username='".$username."'"; 
+					                echo "<a href='$url'>";?><img id="support" href='$url' src="delivery.png"><?php echo "</a>";?>
+				  </div>
+		   </div>
+		
+		
+	       <!-- side bar-->
+	       <div id="side_bar">
+		          <div id="side_bar_item1">
+				     <?php $url="after_login_admin.php?username='".$username."'"; 
+					                echo "<a href='$url'>";?><img id="dicon" href='$url' src="enterprise.png"><?php echo "DASHBOARD</a>";?> 
+					 
+				  </div>
+				  <div id="side_bar_item2">
+				          <?php $url="payment_request.php?username='".$username."'"; 
+					                 echo "<a href='$url'>";?><img id="dailyicon" href='$url' src="calendar.png"><?php echo "DAILY</a>";?>
+				  </div>
+				  <div id="side_bar_item3">
+				       <?php $url="withdraw_payment.php?username='".$username."'"; 
+					                echo "<a href='$url'>";?><img id="payment" href='$url' src="rupee-indian.png"><?php echo "PAYMENT</a>";?>
+				  </div>
+				  <div id="side_bar_item4">
+				       <?php $url="list_of_users.php?username='".$username."'"; 
+					                echo "<a href='$url'>";?><img id="withdraw" href='$url' src="withdraw.png"><?php echo "WITHDRAW</a>";?>
+				  </div>
+				  <div id="side_bar_item5">
+				        <?php $url="change_password.php?username='".$username."'"; 
+					                echo "<a href='$url'>";?><img id="support" href='$url' src="delivery.png"><?php echo "SUPPORT</a>";?>
+				  </div>
+		   </div>
+	
+        	<div id="user_info"  style="">
+			            <?php 
+						    //user info
+							$uquery="SELECT * FROM admin where username='".$username."'";
+							$uresult=mysqli_query($con,$uquery);
+							$urow=mysqli_fetch_array($uresult);
+						?>
+			
+	                   <?php echo "ADMIN:-";echo $urow['username'];?>
+					  <?php ?>
+					  
+					  <form id="user_form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+					  <input type="submit" name="logout" value="" id="logout">
+					  </form>
+					  </div>
+					  <?php
+					     if(isset($_POST['logout']))
+						 {
+					       $tmp=$_SESSION['username'];
+                          session_destroy();
+
+                          session_regenerate_id();
+                          $_SESSION['epin']=$tmp;
+                          header('Location:http://miwallet.online');
+						 }
+					  ?>
+					  
+	       </div>
+		   
+		   <div id="div_withdraw_form">
+		             <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+					         EPIN:-</br><input type="text" name="epin" id="epin" required></br>
+							 WITHDRAW AMOUNT:-</br><input type="text" name="withdraw_amount" id="withdraw_amount" required></br>
+							 <input type="submit" name="submit" id="submit" value="withdraw">
+					 </form>
+		   </div>
+		   
+		   <?php 
+		       if(isset($_POST['sumit']))
+			   {
+				   $epin=$_POST['epin'];
+				   $w_amount=$_POST['withdraw_amount'];
+				   $query="select * from level where epin='".$epin."'";
+				   $result=mysqli_query($con,$query);
+				   $row=mysqli_fetch_array($result);
+				   $total=$row['total'];
+				   $t=$total-$w_amount;
+				   if($t>500)
+				   {
+					   $q="update level set total=".$t." where epin='".$epin."'";
+					   $r=mysqli_fetch_array($con,$q);
+				   }
+				   else
+				   {
+					   echo "you have low balance";
+				   }
+			   }
+		   ?>
+		   
+		   
+</body>
+</html>		   

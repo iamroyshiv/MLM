@@ -1,0 +1,348 @@
+body
+{
+	/*background:url(background-bar-board.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;                 //linear-gradient(to right,#7F00FF ,#E100FF)*/
+	padding:0px;
+	margin:0px;
+	background-attachment: fixed;
+	overflow-x:hidden;
+}
+#top_bar
+{
+	display:none;
+}
+#side_bar
+{
+	position:fixed;
+	background:#e91e63;
+	height:100%;
+	width:7.5%;
+	top:0px;
+	left:0px;
+	z-index: 1;
+}
+
+#side_bar_item1,#side_bar_item2,#side_bar_item3,#side_bar_item4,#side_bar_item5
+{
+	margin-bottom:2%;
+	height:19%;
+	width:100%;
+	background:#e91e63;
+}
+
+#user_info
+{
+	background:#e91e63;
+	text-align:center;
+	width:100%;
+	height:50px;
+	font-size:35px;
+	padding:0%;
+	position:relative;
+	top:0%;
+	left:0%;
+}
+#user_form
+{
+	float:right;
+	padding-right:2%;
+	
+}
+#logout{
+	background:url(LOGOUT.png);
+	background-size:cover;
+	width:40px;
+	height:40px;
+	border:5px solid black;
+}
+#dicon,#dailyicon,#payment,#withdraw,#support{
+	width:100px;
+	height:100px;
+	
+}
+
+#lvl_tbl
+{
+	background:rgba(0,0,0,0.7);
+	color:white;
+	text-align:center;
+	font-weight:bold;
+	border-radius:10px;
+}
+
+
+
+#total_income
+{
+	background:#3F51B5;width:500px;height:100px;font-size:25px;
+    padding:1%;
+    border-radius: 10px;
+	position:absolute;
+	top:65%;
+	left:60%;
+}
+#daily_earning
+{
+	background:#3F51B5;width:200px;height:150px;font-size:25px;
+	padding:1%;
+	position:absolute;
+	border-radius: 10px;
+	margin:1%;
+	top:30%;
+	left:60%;
+}
+#level_description
+{
+	background-image:linear-gradient(to right,#7F00FF ,#E100FF); width:400px;height:500px;font-size:25px;
+	padding:1%;
+	margin:1%;
+	position:relative;
+	top:5%;
+	left:12%;
+	border-radius: 10px;
+}
+
+#level_income
+{
+	background:#3F51B5;width:200px;height:150px;font-size:25px;
+	padding:1%;
+	margin:1%;
+	border-radius: 10px;
+	position:absolute;
+	top:30%;
+	left:80%;
+}
+@media screen and (max-width: 550px) {
+  #level_description {
+    width: 80%;
+    height: 70%;
+    left: 15%;
+    padding-left: 0px;
+    margin-left: 0px;
+    z-index: 1;
+  }
+  #total_income{
+    width: 75%;
+    top:140%; 
+    height: 50%;
+    left: 15%;
+    padding-left: 0px;
+    margin-left: 0px;
+    z-index: 2;
+}
+#daily_earning{
+  width: 80%;
+    top: 100%;
+    left: 15%;
+    padding-left: 0px;
+    margin-left: 0px;
+    z-index: 3;
+}
+#side_bar{
+/*	width:10%;*/
+}
+ #level_income{   
+   width: 10%;
+    padding-left: 0px;
+    left: 15%;
+    margin-left: 0px;
+    } 
+  /*#dicon,#dailyicon,#payment,#withdraw,#support{
+	width:50px;
+	height:50px;
+	}*/    
+}
+
+@media screen and (max-width: 650px) {
+	#side_bar
+	{
+		display:none;
+	}
+    #top_bar
+	{
+		display:block;
+	position:absolute;
+	background:#e91e63;
+	height:11%;
+	width:100%;
+	top:50px;
+	left:0px;
+	z-index: 1;
+}
+
+#top_bar_item1,#top_bar_item2,#top_bar_item3,#top_bar_item4,#top_bar_item5
+{
+	margin-bottom:2%;
+	height:19%;
+	width:100%;
+	background:#e91e63;
+	display:inline;
+}
+
+#dicon,#dailyicon,#payment,#withdraw,#support{
+	width:20%;
+	height:50px;
+	}
+	
+	#top_bar_item1
+	{
+		position:absolute;
+		left:0%;
+	}
+	#top_bar_item2
+	{
+		position:absolute;
+		left:20%;
+	}
+	#top_bar_item3
+	{
+		position:absolute;
+		left:40%;
+	}
+	#top_bar_item4
+	{
+		position:absolute;
+		left:60%;
+	}
+	#top_bar_item5
+	{
+		position:absolute;
+		left:80%;
+	}
+	
+	#users_list{
+		position:absolute;
+		left:10%;
+	margin-left:0 ;
+	margin-top:0;
+    width:100%;	
+}
+#pin_generate{
+	position:absolute;
+	margin-left: 0%;
+	margin-top: 0%;
+	top:30%;
+	left:15%;
+	width: 70%;
+	border-radius:5px;
+	height: 8%;
+	font-size: 17px;
+	background-color:#C9159B;
+	text-align:center;
+	border-color: #C9159B; 
+	padding-right:10%;
+	font-weight:bold;
+}
+#updatebtn{
+	margin-left:0%;
+	margin-top: 0%;
+	position:absolute;
+	top:50%;
+	left:15%;
+	width: 70%;
+	height: 8%;
+	font-size: 17px;
+	padding-right:10%;
+	border-radius:5px;
+	background-color: #C9159B;
+	border-color: #C9159B;
+
+}
+#pin_generate:hover,#updatebtn:hover{
+	 background-color: aqua;
+    border: blue;
+}
+#lvl_tbl{
+	margin-left: 0%;
+	margin-right: 0%;
+	margin-top: 0%;
+	position:absolute;
+	top:200px;
+	left:0px;
+}
+#pin
+{
+	position:absolute;
+	left:10%;
+	height:5%;
+	font-size:100%;
+	text-align:center;
+}
+
+#generate_epin{
+	text-align:center;
+	
+	margin-bottom:5px;
+}
+
+
+
+#div_payment
+{
+   position:absolute;
+   background:rgba(0,0,0,0.7);
+	top:40%;
+	left:5%;
+width:90%;	
+}
+#tbl_pay{
+	margin-top: 10%;
+	margin-left: 5%;
+	background:rgba(0,0,0,0.7);
+	color:white;
+	font-weight:bold;
+	border-radius:5px;
+	text-align:center;
+	width:90%;
+}
+
+#div_withdraw_form
+{
+	position:absolute;
+	width:70%;
+	border-radius:10px;
+	background:rgba(0,0,0,0.7);
+	color:white;
+	padding:2%;
+	padding-left:8%;
+	left:0%;
+	top:45%;
+	
+}
+
+#div_change_password
+{
+	position:absolute;
+	left: 10%;
+	width:80%;
+	top:30%;
+	height:400px;
+	
+}
+#c_password{
+	position:absolute;
+	padding:10px;
+	margin-top: 60px;
+	margin-left: 30%;
+	
+	 border-radius: 6px;
+    background: #C9159B;
+    border-color: #C9159B;
+}
+#form_change{
+	margin-left: 0%;
+	margin-top: 10%;
+	width: 100%;
+	height: 100%;
+	border:3px solid black;
+	background: rgba(0,0,0,.7); 
+	border-radius: 10px;
+}
+#old_pass,#new_pass{
+	width: 220px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+}

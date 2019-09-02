@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link href="register.css" rel="stylesheet" type="text/css" media="all">
+    <link href="icon2.png" rel="shortcut icon" type="image/png">
+    <link rel="stylesheet" type="text/css" href="toogle.css" media="all">
+    <script type="text/javascript" src="checkpassword.js"></script>
+    <script> 
+           
+            function checkPassword(form) { 
+                password1 = form.pass1.value; 
+                password2 = form.pass2.value; 
+  
+                if (pass2 != pass1) { 
+                    alert ("\nPassword did not match: Please try again...") 
+                    return false; 
+                } 
+                else{ 
+                    alert("Password Match:Proceed Further") 
+                    return true; 
+                } 
+            } 
+        </script>
+
+</head>
+<body>
+
+
+    <nav role="navigation">
+  <div id="menuToggle">
+    
+    <input type="checkbox" />
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <ul id="menu">
+      <a href="index.html"><li>Home</li></a>
+      <a href="register.html"><li>Register</li></a>
+      <a href="adminlogin.html"><li>Admin Login</li></a>
+      <a href="login.html"><li>User Login</li></a>
+      <a href="aboutus.html"><li>About Us</li></a>
+      <a href="contactus.html"><li>Contact Us</li></a>
+    </ul>
+  </div>
+</nav>
+
+    <header>
+            <div class="menu-toggle">
+                
+            </div>
+            <div id="nav">
+                
+                <ul>
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><div class="dropdown">
+  <a class="dropbtn">LOGIN</a>
+  <div class="dropdown-content">
+    <a href="login.html">User Login</a>
+    <a href="admin_login.html">Admin Login</a>
+    <a href="register.html">Register Here</a>
+  </div>
+</div></li>
+
+                    <li><a href="aboutus.html">ABOUT US</a></li> 
+                    <li><a href="contactus.html">CONTACT US</a></li>
+
+                </ul>
+            </div>
+     </header>
+
+        <div class="signup">
+                <h1>Create an Account<img id="arrow"   src="icons8-chevron-down-64.png"></h1>
+                <form id="form" method="POST" action="register.php"><!-- onSubmit = "return checkPassword(this)">-->
+                    <p >Username</p>
+                    <input id="namefield" name="namefield" type="text" placeholder="Enter your Username:" required="true">
+                    <p>Referal ID</p>
+                    <input id="namefield"  name="referalid" type="text" placeholder="Enter your Referal ID:" required="true">
+                    <p>E-mail</p>
+                    <input id="email" name="email"   type="email" placeholder="Enter your E-mail:" required="true">
+                    <p for="pass1">Password:</p>
+                    <input id="pass1" name="pass1"   type="password" placeholder="Enter your Password:" required="true">
+                    <p for="pass2">Confirm Password:</p>
+                    <input id="pass2" name="pass2"  type="password" placeholder="Confirm Password:" required="true">
+                    <span id="confirmMessage" class="confirmMessage"></span>
+                    <p>City</p>
+                    <input id="email" name="city"   type="text" placeholder="City:" required="true">
+                    <p>EPIN</p>
+                    <input id="email" name="epin"   type="text" placeholder="Enter E-PIN:" required="true">
+                    <p>Mobile NO.</p>
+                    <input id="email" name="mobileno"   type="text" placeholder="Enter your Mobile No:" required="true">                                                           
+                    <input id="btn" type="submit" name="submit" value="Signup">
+
+                 </form> 
+                 </div>
+                 <!-- bubble effect -->
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <!-- //bubble effect -->  
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>
